@@ -1,0 +1,45 @@
+public class Main {
+       public static void main(String[] args) {
+        String text = "esta es una hilera de prueba";
+        String pattern = "una";
+        System.out.println("Se prueba el primer algoritmo: FuerzaBruta");
+        System.out.println("Se busca '" + pattern + "' en '" + text + "'");
+        System.out.println("El indice es " + Algoritmos.FuerzaBruta(text, pattern) + '\n');
+
+        pattern = "no";
+        System.out.println("Se busca '" + pattern + "' en '" + text + "'");
+        System.out.println("El indice es " + Algoritmos.FuerzaBruta(text, pattern) + '\n');
+
+
+        System.out.println("Se prueba el segundo algoritmo: Knuth-MorrisPratt");
+        pattern = "una";
+        System.out.println("Se busca '" + pattern + "' en '" + text + "'");
+        System.out.println("El indice es " + Algoritmos.KnuthMorrisP(text, pattern) + '\n');
+
+        pattern = "no";
+        System.out.println("Se busca '" + pattern + "' en '" + text + "'");
+        System.out.println("El indice es " + Algoritmos.KnuthMorrisP(text, pattern) + '\n');
+
+
+        System.out.println("Se prueba el tercer algoritmo: Boyer-Moore");
+        pattern = "una";
+        System.out.println("Se busca '" + pattern + "' en '" + text + "'");
+        System.out.println("El indice es " + Algoritmos.BoyerMoore(text, pattern) + '\n');
+
+        pattern = "no";
+        System.out.println("Se busca '" + pattern + "' en '" + text + "'");
+        System.out.println("El indice es " + Algoritmos.BoyerMoore(text, pattern) + '\n');
+
+
+        text = "esta es una hilera de prueba mas larga, los 3 algoritmos se van a probar con esta nueva hilera, y se buscara no una palabra sino varias";
+        System.out.println("Se buscara 'prueba mas' en '" + text + "'");
+        System.out.println("Usando FB, el indice es: " + Algoritmos.FuerzaBruta(text, "prueba mas") + '\n');
+
+        System.out.println("Se buscara 'prueba mas' en '" + text + "'");
+        System.out.println("Usando KNP, el indice es: " + Algoritmos.KnuthMorrisP(text, "prueba mas") + '\n');
+
+        System.out.println("Se buscara 'prueba mas' en '" + text + "'");
+        System.out.println("Usando BM, el indice es: " + Algoritmos.BoyerMoore(text, "prueba mas") + '\n');
+    }
+}
+
